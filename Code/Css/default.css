@@ -1,0 +1,218 @@
+/*
+    Author: Group
+    Date: 2023.02.16
+*/
+body
+{
+    background-image: url("images/gradient.png");
+    background-size: 100% 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav_container
+{
+    /* the following positions the menu div 50% down from the top and then moves it back up 50% of the div's size */
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 99%;
+}
+
+/* this is for the menu box which holds the logo title and buttons */
+.menu_box
+{
+    background-image:  url("images/gradient_turned.png");
+    background-size: 100% 100%;
+    margin: 0px 20px 0px 20px;
+    width: 250px;
+    border: 5px black solid;
+    border-radius: 30px;
+    position: relative;
+}
+
+.logo
+{
+    content: url("images/logo.png");
+    width: 100%;
+    cursor: pointer;
+}
+
+/* this is for the menu title on the left */
+.menu_title
+{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 0px 5px 0px 5px;
+}
+
+/* this is for the menu buttons on the left */
+.menu_button
+{
+    border: 3px black solid;
+    border-radius: 20px;
+    width: 70%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    /* removes the underline */
+    text-decoration: none;
+    /* makes the cursor look like it is selecting */
+    cursor: pointer;
+}
+
+/* this is for the top sub menu box */
+.sub_menu_box
+{
+    border: 5px black solid;
+    border-radius: 30px;
+    position: absolute;
+    left: 320px;
+    top: 0px;
+    height: 100px;
+    width: 78%;
+    text-align: center;
+}
+
+.sub_menu_button
+{
+    display: inline-block;
+    border: 3px black solid;
+    border-radius: 30px;
+    margin: 10px;
+    height: 45%;
+    /* this is different for the four button, it is set to 20% */
+    width: 30%;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    /* do not touch padding and height */
+    padding: 25px 0px 0px 0px;
+}
+
+/* box for the contents of the page */
+.content_box
+{
+    border: 5px black solid;
+    border-radius: 30px;
+    position: absolute;
+    left: 320px;
+    top: 150px;
+    width: 78%;
+    min-height: calc(100% - 160px);
+}
+
+/* form for the content box */
+.content_box_form
+{
+    width: 100%;
+    height: 100%;
+}
+
+/* left side of the content box */
+.content_box_left
+{
+    float: left;
+    width: calc(50% - 100px);
+    margin: 50px;
+    margin-bottom: 20px;
+    height: calc(100% - 100px);
+}
+
+/* right side of the content box */
+.content_box_right
+{
+    float: right;
+    width: calc(50% - 100px);
+    margin: 50px;
+    margin-bottom: 20px;
+    height: calc(100% - 100px);
+}
+
+/* labels for the content box */
+.content_box label
+{
+    margin: 20px 0px 10px 0px;
+    /* this makes it so the margin has an effect of the inputs */
+    display:inline-block;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* text box default for the content box */
+.content_box input, .content_box textarea, .content_box select, .content_box_report table
+{
+    border: 3px black solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 20px;
+    width: 60%;
+    /* stops the user from resizing the textarea */
+    resize: none;
+    /* half transparent white */
+    background-color: rgba(255,255,255,0.5);
+}
+
+/* greyed out text boxes for disabled fields for content box */
+.content_box input[disabled], .content_box textarea[disabled], .content_box select[disabled],
+.content_box input[readonly], .content_box textarea[readonly], .content_box select[disabled]
+{
+    color: black;
+    opacity: 1;
+    background-color: rgba(128,128,128,0.5);
+    cursor: default;
+}
+
+/* content box hight for description */
+.content_box #description
+{
+    height: 240px;
+}
+
+/* styles the submit and clear buttons */
+input.content_box_button
+{
+    width: 20%;
+    margin: 50px calc(20% + 5px) 0px 0px;
+    cursor: pointer;
+}
+
+/* makes the listbox the same length as inputs */
+.content_box select
+{
+	width: calc(60% + 16px);	
+}
+
+/* removes the spinner arrows from number inputs */
+/* https://developer.mozilla.org/en-US/docs/Learn */
+/* Chrome */
+input::-webkit-inner-spin-button
+{
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number]
+{
+    -moz-appearance: textfield;
+}
+
+/* centers report table */
+.content_box_report table
+{
+    text-align: center;
+    margin: 0px 50px 50px 50px;
+    width: calc(100% - 100px);
+}
+
+/* styles the columns */
+.content_box_report td
+{
+    padding: 5px;
+}
